@@ -1,0 +1,61 @@
+<template>
+ <div id="cesiumContainer1"></div> 
+</template>
+
+<script>
+// import * as Cesium from 'cesium/Source/Cesium';
+// import 'cesium/Source/Widgets/widgets.css';
+// import "../../node_modules/cesium/Build/Cesium/Widgets/widgets.css";
+export default {
+    mounted() {
+      Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzZmM4MWYwYS0xOWM3LTQ0ZWEtYTUzNC1mMWI3ODAyODA1ZmYiLCJpZCI6NDQ2OTEsImlhdCI6MTYxNDI0NDk1OX0.5wce5JelLgCOVQ513YI9QtLDuqTA_L9Y0u_s2oFkWR4';
+      // const viewer = new Cesium.Viewer('cesiumContainer1');
+      var viewer = new Cesium.Viewer("cesiumContainer1");
+
+var greenCircle = viewer.entities.add({
+  position: Cesium.Cartesian3.fromDegrees(-111.0, 40.0, 150000.0),
+  name: "Green circle at height with outline",
+  ellipse: {
+    semiMinorAxis: 300000.0,
+    semiMajorAxis: 300000.0,
+    height: 200000.0,
+    material: Cesium.Color.GREEN,
+    outline: true, // height must be set for outline to display
+  },
+});
+
+var redEllipse = viewer.entities.add({
+  position: Cesium.Cartesian3.fromDegrees(-103.0, 40.0),
+  name: "Red ellipse on surface",
+  ellipse: {
+    semiMinorAxis: 250000.0,
+    semiMajorAxis: 400000.0,
+    material: Cesium.Color.RED.withAlpha(0.5),
+  },
+});
+
+var blueEllipse = viewer.entities.add({
+  position: Cesium.Cartesian3.fromDegrees(-95.0, 40.0, 100000.0),
+  name: "Blue translucent, rotated, and extruded ellipse with outline",
+  ellipse: {
+    semiMinorAxis: 150000.0,
+    semiMajorAxis: 300000.0,
+    rotation: Cesium.Math.toRadians(45),
+    material: Cesium.Color.BLUE.withAlpha(0.5),
+    outline: true,
+  },
+});
+
+viewer.zoomTo(viewer.entities);
+
+    },
+
+}
+</script>
+
+<style>
+#cesiumContainer1 {
+    width: 100%;
+    height: 100%;
+}
+</style>
