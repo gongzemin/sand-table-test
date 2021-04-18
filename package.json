@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "cesium": "^1.8.0",
-    "copy-webpack-plugin": "^5.1.2",
+    "cesium": "^1.80.0",
+    "copy-webpack-plugin": "6.0.3",
     "core-js": "^3.6.5",
     "js-cookie": "^2.2.1",
     "view-design": "4.5.0",
