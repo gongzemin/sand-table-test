@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-// import DECoreViewer from '@/views/DECoreViewer.vue'
+import DECoreViewer from '@/views/DECoreViewer.vue'
 import Test from '@/views/Test.vue'
 // const DECoreViewer = () => import ('@/views/DECoreViewer')
 
