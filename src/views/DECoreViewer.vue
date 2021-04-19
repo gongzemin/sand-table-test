@@ -55,8 +55,8 @@ export default {
     this.$refs.sand.getPOIList();
     this.$refs.sand.getGLBList();
     //需要从cookie获取数据
-    this.$store.commit('common/getDeptId',this.$Cookies.get('deptId'));
-    this.$store.commit('common/getUid',this.$Cookies.get('uid'));
+    // this.$store.commit('common/getDeptId',this.$Cookies.get('deptId'));
+    // this.$store.commit('common/getUid',this.$Cookies.get('uid'));
     this.$refs.sand.ListInit();
     this.$refs.sand.POIList();
     this.$refs.sand.VectorList();
